@@ -19,7 +19,7 @@ class ResumeGame extends FlameGame {
   Future<void> onLoad() async {
     final parallax = await loadParallaxComponent(
       _imageNames,
-      baseVelocity: Vector2(20, 0),
+      baseVelocity: Vector2(5, 0),
       velocityMultiplierDelta: Vector2(1.8, 1.0),
       filterQuality: FilterQuality.none,
     );
