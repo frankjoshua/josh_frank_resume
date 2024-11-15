@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flame/components.dart';
 import 'package:flame/game.dart';
 import 'package:flame/parallax.dart';
+import 'package:josh_frank_resume/hiring_manager.dart';
 
 class ResumeGame extends FlameGame {
   ResumeGame(World world) : super(world: world);
@@ -24,5 +25,14 @@ class ResumeGame extends FlameGame {
       filterQuality: FilterQuality.none,
     );
     add(parallax);
+    await images.loadAll([
+      'adventurer_tilesheet.png',
+    ]);
+    camera.viewfinder.anchor = Anchor.topLeft;
+
+    final hiringManager = HiringManager(
+      position: Vector2(canvasSize.x * .25, canvasSize.y * .75),
+    );
+    world.add(hiringManager);
   }
 }
