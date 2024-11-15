@@ -6,12 +6,10 @@ class ResumeWorld extends World {
   @override
   Future<void> onLoad() async {
     add(
-      TextComponent(
-        text: 'Joshua Frank',
-      ),
+      TextComponent(text: 'Joshua Frank', position: Vector2(10, 35)),
     );
     add(
-      TextComponent(text: 'Resume', position: Vector2(0, -25)),
+      TextComponent(text: 'Resume of', position: Vector2(10, 10)),
     );
   }
 }
