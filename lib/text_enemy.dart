@@ -8,12 +8,23 @@ class TextEnemy extends PositionComponent
     with HasGameReference<ResumeGame>, TapCallbacks {
   TextEnemy({
     required super.position,
+    required this.text,
   }) : super(size: Vector2(200, 20), anchor: Anchor.center, priority: 1);
+
+  final String text;
 
   @override
   void onLoad() {
     add(RectangleHitbox());
-    add(TextComponent(text: 'Joshua Frank', position: Vector2(0, 0)));
+    add(TextComponent(text: text, position: Vector2(0, 0)));
+    final moveAcross = MoveEffect.by(
+        Vector2(-game.canvasSize.x, 0), EffectController(duration: 2.0));
+    final moveDown = MoveEffect.to(
+        Vector2(game.canvasSize.x / 2, game.canvasSize.y),
+        EffectController(duration: 2.0));
+    final moveEffect = SequenceEffect([moveAcross, moveDown]);
+
+    add(moveEffect);
   }
 
   @override
@@ -22,11 +33,5 @@ class TextEnemy extends PositionComponent
       Vector2(30, 30),
       EffectController(duration: 1.0),
     ));
-  }
-
-  @override
-  void update(double dt) {
-    super.update(dt);
-    position.x -= 200 * dt;
   }
 }

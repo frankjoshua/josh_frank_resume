@@ -4,21 +4,14 @@ import 'package:flame/components.dart';
 import 'package:flame/events.dart';
 import 'package:josh_frank_resume/hiring_manager.dart';
 import 'package:josh_frank_resume/resume_game.dart';
-import 'package:josh_frank_resume/text_enemy.dart';
+import 'package:josh_frank_resume/resume_text_spawner.dart';
 
 class ResumeWorld extends World
     with HasGameReference<ResumeGame>, TapCallbacks, HasCollisionDetection {
   HiringManager? hiringManager;
-  double lastSpawn = 0;
 
   @override
   Future<void> onLoad() async {
-    // add(
-    //   TextComponent(text: 'Joshua Frank', position: Vector2(10, 35)),
-    // );
-    // add(
-    //   TextComponent(text: 'Resume of', position: Vector2(10, 10)),
-    // );
     await game.images.loadAll([
       'adventurer_tilesheet.png',
     ]);
@@ -29,6 +22,7 @@ class ResumeWorld extends World
       position: Vector2(game.canvasSize.x * .25, game.canvasSize.y * .5),
     );
     add(hiringManager!);
+    add(ResumeTextSpawner());
   }
 
   @override
@@ -45,17 +39,6 @@ class ResumeWorld extends World
   //   }
   //   return super.onKeyEvent(event, keysPressed);
   // }
-
-  @override
-  void update(double dt) {
-    super.update(dt);
-    lastSpawn += dt;
-    if (lastSpawn > 3) {
-      lastSpawn = 0;
-      add(TextEnemy(
-          position: Vector2(game.canvasSize.x, game.canvasSize.y * .5)));
-    }
-  }
 
   void action() {
     hiringManager?.jump();
