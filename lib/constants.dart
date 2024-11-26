@@ -1,6 +1,6 @@
 class AppConstants {
   static String RESUME_TEXT = """
-JJoshua Frank
+Joshua Frank
 
 St. Louis, MO
 josh@joshfrank.com • github.com/frankjoshua • joshfrank.com

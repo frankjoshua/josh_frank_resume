@@ -20,8 +20,10 @@ class TextEnemy extends PositionComponent
     final moveAcross = MoveEffect.by(
         Vector2(-game.canvasSize.x, 0), EffectController(duration: 2.0));
     final moveDown = MoveEffect.to(
-        Vector2(game.canvasSize.x / 2, game.canvasSize.y),
-        EffectController(duration: 2.0));
+      Vector2(game.canvasSize.x / 2, game.canvasSize.y),
+      EffectController(duration: 2.0),
+      onComplete: () => {removeFromParent()},
+    );
     final moveEffect = SequenceEffect([moveAcross, moveDown]);
 
     add(moveEffect);

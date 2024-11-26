@@ -1,16 +1,11 @@
 import 'dart:ui';
 
 import 'package:flame/components.dart';
-import 'package:flame/events.dart';
 import 'package:flame/game.dart';
 import 'package:flame/parallax.dart';
-import 'package:flutter/src/services/hardware_keyboard.dart';
-import 'package:flutter/src/services/keyboard_key.g.dart';
-import 'package:flutter/src/widgets/focus_manager.dart';
-import 'package:josh_frank_resume/hiring_manager.dart';
-import 'package:josh_frank_resume/text_enemy.dart';
+import 'package:flame_riverpod/flame_riverpod.dart';
 
-class ResumeGame extends FlameGame {
+class ResumeGame extends FlameGame with RiverpodGameMixin {
   ResumeGame(World world) : super(world: world);
 
   final _imageNames = [
