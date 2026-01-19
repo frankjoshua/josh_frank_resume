@@ -63,7 +63,7 @@ DevOps:       Git, Firebase, Docker, ROS 2`,
 
 Email:   josh@joshfrank.com
 GitHub:  github.com/frankjoshua
-Web:     joshfrank.com`,
+Web:     tesseractmobile.com`,
   };
 
   const output = document.getElementById('terminal-output');
