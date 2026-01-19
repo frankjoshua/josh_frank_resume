@@ -70,6 +70,11 @@ Web:     joshfrank.com`,
   const input = document.getElementById('terminal-input');
   const buttons = document.getElementById('terminal-buttons');
 
+  if (!output || !input || !buttons) {
+    console.error('Terminal: Required DOM elements not found');
+    return;
+  }
+
   function addLine(text, className = 'response') {
     const line = document.createElement('div');
     line.className = `line ${className}`;
@@ -81,7 +86,10 @@ Web:     joshfrank.com`,
   function addCommand(cmd) {
     const line = document.createElement('div');
     line.className = 'line';
-    line.innerHTML = `<span class="command">❯ ${cmd}</span>`;
+    const span = document.createElement('span');
+    span.className = 'command';
+    span.textContent = `❯ ${cmd}`;
+    line.appendChild(span);
     output.appendChild(line);
   }
 
@@ -113,6 +121,8 @@ Web:     joshfrank.com`,
   input.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
       executeCommand(input.value);
+      input.value = '';
+    } else if (e.key === 'Escape') {
       input.value = '';
     }
   });
