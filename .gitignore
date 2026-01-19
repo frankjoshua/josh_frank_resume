@@ -10,3 +10,6 @@ Thumbs.db
 
 # Firebase
 .firebase/
+
+# Local dev
+serve.sh
