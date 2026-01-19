@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Joshua Frank - Mobile App Developer with 15+ years experience. Founder of Tesseract Mobile.">
+  <title>Joshua Frank | Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-content">
+      <h1 class="name">Joshua Frank</h1>
+      <p class="title">Mobile App Developer</p>
+      <nav class="contact-links">
+        <a href="mailto:josh@joshfrank.com" aria-label="Email">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          <span>josh@joshfrank.com</span>
+        </a>
+        <a href="https://github.com/frankjoshua" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+          </svg>
+          <span>GitHub</span>
+        </a>
+        <a href="https://joshfrank.com" aria-label="Website">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span>joshfrank.com</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="terminal-section" id="terminal">
+      <div class="terminal">
+        <div class="terminal-header">
+          <span class="terminal-dot red"></span>
+          <span class="terminal-dot yellow"></span>
+          <span class="terminal-dot green"></span>
+          <span class="terminal-title">josh@resume:~</span>
+        </div>
+        <div class="terminal-body">
+          <div class="terminal-output" id="terminal-output"></div>
+          <div class="terminal-input-line">
+            <span class="prompt">></span>
+            <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Terminal input">
+            <span class="cursor"></span>
+          </div>
+        </div>
+        <div class="terminal-buttons" id="terminal-buttons">
+          <button data-cmd="about">about</button>
+          <button data-cmd="skills">skills</button>
+          <button data-cmd="projects">projects</button>
+          <button data-cmd="experience">experience</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="projects-grid">
+        <article class="project-card featured">
+          <h3>Tesseract Mobile</h3>
+          <p class="project-meta">Founder & Lead Developer | 2008 - Present</p>
+          <p>Spearheaded development of 15+ mobile applications with over 5 million combined downloads. Pioneered advanced image processing solutions using SAM and Stable Diffusion.</p>
+          <div class="project-tags">
+            <span>Kotlin</span>
+            <span>Flutter</span>
+            <span>AI/ML</span>
+          </div>
+        </article>
+        <article class="project-card">
+          <h3>Solitaire Free Pack</h3>
+          <p class="project-meta">5M+ Downloads</p>
+          <p>Custom engine powering 250 solitaire variations. Successfully sold to a media company.</p>
+          <div class="project-tags">
+            <span>Custom Engine</span>
+            <span>Android</span>
+          </div>
+        </article>
+        <article class="project-card">
+          <h3>MonAI: Art Generator</h3>
+          <p class="project-meta">50K+ Downloads | 4.5 Rating</p>
+          <p>Real-time background removal with custom eraser tools and social media integration.</p>
+          <div class="project-tags">
+            <span>Flutter</span>
+            <span>SAM</span>
+            <span>Firebase</span>
+          </div>
+        </article>
+        <article class="project-card">
+          <h3>Infinite Evolution</h3>
+          <p class="project-meta">Custom Game Engine</p>
+          <p>Built custom game engine driving unique gameplay. Enhanced performance by 35%.</p>
+          <div class="project-tags">
+            <span>Kotlin</span>
+            <span>Game Dev</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <h2 class="section-title">Experience</h2>
+      <div class="timeline">
+        <article class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>Tesseract Mobile</h3>
+            <p class="role">Founder and Lead Developer</p>
+            <p class="period">St. Louis, MO | 2008 - Present</p>
+            <ul>
+              <li>Spearheaded development of 15+ mobile applications</li>
+              <li>Pioneered image processing with SAM and Stable Diffusion, improving speed by 50%</li>
+              <li>Architected cross-platform solutions with deep linking, enhancing retention by 25%</li>
+              <li>Led multidisciplinary team with 95% on-time delivery rate</li>
+            </ul>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>Archway Technologies</h3>
+            <p class="role">System Administrator</p>
+            <p class="period">St. Louis, MO | 2005 - 2008</p>
+            <ul>
+              <li>Optimized server performance and network reliability</li>
+              <li>Automated administration tasks via Bash scripting, reducing workload by 40%</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Languages</h3>
+          <ul>
+            <li>Kotlin</li>
+            <li>Dart</li>
+            <li>Python</li>
+            <li>Java</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>Frameworks</h3>
+          <ul>
+            <li>Android SDK</li>
+            <li>Flutter</li>
+            <li>Jetpack Compose</li>
+            <li>Riverpod</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>AI & Image Processing</h3>
+          <ul>
+            <li>SAM Model</li>
+            <li>Stable Diffusion</li>
+            <li>NVIDIA CUDA</li>
+            <li>Torch Pipelines</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>Tools & DevOps</h3>
+          <ul>
+            <li>Git</li>
+            <li>Firebase</li>
+            <li>Docker</li>
+            <li>ROS 2</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="associations">
+      <h2 class="section-title">Community</h2>
+      <div class="association">
+        <h3>St. Louis Robotics Association</h3>
+        <p class="role">President | 2018 - 2024</p>
+        <ul>
+          <li>Led initiatives fostering collaboration, increasing membership by 40%</li>
+          <li>Organized 10+ annual events including workshops and hackathons</li>
+          <li>Implemented mentorship programs supporting local tech community</li>
+        </ul>
+      </div>
+      <div class="interests">
+        <h3>Interests</h3>
+        <p><strong>Chess Expert:</strong> 1st (tied) 12th Grade National Champion. Missouri Rapid Chess Champion. Applies strategic planning to software development challenges.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Joshua Frank</p>
+  </footer>
+
+  <script src="terminal.js"></script>
+</body>
+</html>
