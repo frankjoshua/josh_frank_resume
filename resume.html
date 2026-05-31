@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Résumé — Joshua Frank, AI Engineer (Agentic Systems & Tooling).">
+  <title>Joshua Frank — Résumé</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1c1a17;
+      --muted: #5a564e;
+      --accent: #20684a;
+      --rule: #e3ded3;
+      --serif: 'Fraunces', Georgia, 'Times New Roman', serif;
+      --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #e7e4dd;
+      font-family: var(--sans);
+      color: var(--ink);
+      line-height: 1.4;
+      padding: 24px 12px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Screen toolbar */
+    .toolbar {
+      max-width: 8.5in;
+      margin: 0 auto 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--sans);
+      font-size: 13px;
+    }
+    .toolbar a, .toolbar button {
+      font-family: var(--sans);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--accent);
+      background: none;
+      border: 1px solid var(--accent);
+      border-radius: 6px;
+      padding: 7px 13px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .toolbar button:hover, .toolbar a:hover { background: rgba(32, 104, 74, 0.08); }
+
+    /* The page sheet */
+    .sheet {
+      max-width: 8.5in;
+      margin: 0 auto;
+      background: #fff;
+      padding: 0.55in 0.6in;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.16);
+    }
+
+    header.r-head { border-bottom: 2px solid var(--accent); padding-bottom: 11px; margin-bottom: 13px; }
+    .r-name {
+      font-family: var(--serif);
+      font-size: 31px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+    }
+    .r-title {
+      font-family: var(--sans);
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--accent);
+      margin-top: 3px;
+    }
+    .r-tagline { font-size: 12px; color: var(--muted); margin-top: 3px; }
+    .r-contact {
+      font-family: var(--sans);
+      font-size: 11.5px;
+      color: var(--muted);
+      margin-top: 9px;
+    }
+    .r-contact a { color: var(--muted); text-decoration: none; }
+
+    section.block { margin-top: 14px; }
+    h2.block-title {
+      font-family: var(--sans);
+      font-size: 11.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--accent);
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 3px;
+      margin-bottom: 8px;
+    }
+
+    .summary { font-size: 12.5px; }
+
+    .skills-row { font-size: 12px; margin-bottom: 3px; }
+    .skills-row b { font-family: var(--sans); color: var(--ink); font-weight: 700; }
+
+    .job { margin-bottom: 10px; }
+    .job-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; }
+    .job-org { font-family: var(--serif); font-weight: 600; font-size: 14.5px; }
+    .job-when { font-family: var(--sans); font-size: 11px; color: var(--muted); }
+    .job-role { font-size: 12px; color: var(--accent); font-weight: 600; margin-bottom: 3px; }
+
+    ul.bullets { list-style: none; }
+    ul.bullets li {
+      position: relative;
+      padding-left: 16px;
+      font-size: 12px;
+      margin-bottom: 2.5px;
+    }
+    ul.bullets li::before {
+      content: '>';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-family: var(--mono);
+    }
+
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 24px; }
+    @media (max-width: 560px) { .two-col { grid-template-columns: 1fr; } }
+
+    code {
+      font-family: var(--mono);
+      font-size: 11px;
+      background: #f2f1ec;
+      padding: 0.5px 4px;
+      border-radius: 3px;
+    }
+
+    /* ===== Print ===== */
+    @page { size: letter; margin: 0.5in; }
+    @media print {
+      body { background: #fff; padding: 0; }
+      .toolbar { display: none; }
+      .sheet { box-shadow: none; max-width: none; padding: 0; margin: 0; }
+      a { color: var(--ink) !important; }
+      :root { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar no-print">
+    <a href="index.html">← back to site</a>
+    <button onclick="window.print()">Download PDF / Print</button>
+  </div>
+
+  <div class="sheet">
+    <header class="r-head">
+      <div class="r-name">Joshua Frank</div>
+      <div class="r-title">AI Engineer — Agentic Systems &amp; Tooling</div>
+      <div class="r-tagline">Self-taught · 15+ years shipping mobile products at scale</div>
+      <div class="r-contact">
+        josh@joshfrank.com&nbsp; ·&nbsp; github.com/frankjoshua&nbsp; ·&nbsp; tesseractmobile.com&nbsp; ·&nbsp; St. Louis, MO
+      </div>
+    </header>
+
+    <section class="block">
+      <h2 class="block-title">Summary</h2>
+      <p class="summary">Self-taught engineer with 15+ years shipping mobile products at scale. I build the tooling AI agents run on — MCP servers, live agent UIs, and multi-agent workflows — and use agents to ship fast. Founder of Tesseract Mobile; built and sold apps with 5M+ downloads.</p>
+    </section>
+
+    <section class="block">
+      <h2 class="block-title">Skills</h2>
+      <div class="skills-row"><b>Agentic AI:</b> MCP (Model Context Protocol), Claude / Claude Code, LLM orchestration, agent tooling, prompt evaluation</div>
+      <div class="skills-row"><b>Mobile:</b> Kotlin, Flutter / Dart, Jetpack Compose, Android SDK</div>
+      <div class="skills-row"><b>AI / ML:</b> Stable Diffusion, SAM, NVIDIA CUDA, computer vision</div>
+      <div class="skills-row"><b>Infra / DevOps:</b> Docker, Ansible, Firebase, Python, GPU ops, monitoring</div>
+    </section>
+
+    <section class="block">
+      <h2 class="block-title">Experience</h2>
+      <div class="job">
+        <div class="job-head">
+          <span class="job-org">Tesseract Mobile</span>
+          <span class="job-when">St. Louis, MO · 2008 – Present</span>
+        </div>
+        <div class="job-role">Founder &amp; Lead Developer</div>
+        <ul class="bullets">
+          <li>Built and shipped 15+ mobile apps across Android and Flutter — 5M+ combined downloads.</li>
+          <li>Built MonAI, a production AI image platform serving 100K users: GPU inference, request routing, real-time websockets, and monitoring.</li>
+          <li>Wrote MCP servers and agent tooling that connect LLM agents to production systems and hardware, including ROS2 robots.</li>
+          <li>Built and sold Solitaire Free Pack (5M+ downloads) — a seven-figure acquisition.</li>
+          <li>Own the full stack: product, mobile, backend, GPU infrastructure, and DevOps (Docker, Ansible, Firebase).</li>
+        </ul>
+      </div>
+      <div class="job">
+        <div class="job-head">
+          <span class="job-org">Earlier ventures</span>
+        </div>
+        <div class="job-role">Founder</div>
+        <ul class="bullets">
+          <li>Founded and ran two prior technology companies — TechCentric and Archway Technologies — before starting Tesseract Mobile in 2008.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2 class="block-title">Selected Projects &amp; Open Source</h2>
+      <ul class="bullets two-col">
+        <li><code>docker-ros2-mcp-server</code> — MCP server letting LLM agents drive ROS2 robots.</li>
+        <li><code>monai_mcp_server</code> — exposes my production AI platform to agents.</li>
+        <li><code>agent-canvas</code> — live browser UI for Claude Code sessions.</li>
+        <li><code>ccbot</code> (contributor) — Telegram ↔ Claude Code bridge.</li>
+        <li><code>rosserial_arduino_lib</code> — ⭐ 63 — Arduino ↔ ROS serial library.</li>
+        <li>136 public repositories at github.com/frankjoshua.</li>
+      </ul>
+      <div class="skills-row" style="margin-top:5px"><b>Talks:</b> Model Context Protocol (2025), LangChain (2025)</div>
+    </section>
+
+    <section class="block">
+      <h2 class="block-title">Community &amp; Education</h2>
+      <ul class="bullets">
+        <li>President, St. Louis Robotics Association (2018 – 2024).</li>
+        <li>Chess: tied 1st, 12th-Grade National Champion; Missouri Rapid Chess Champion.</li>
+        <li>Self-taught — home-schooled with a self-directed education, continued throughout a 15+ year career. 130+ public repositories.</li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>
