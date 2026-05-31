@@ -31,15 +31,27 @@ a:hover { opacity: 0.65; }
 /* ===== Hero ===== */
 .hero { padding: 56px 0 40px; border-bottom: 1px solid var(--line); }
 
+.hero-id {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 6px;
+}
+.hero-id-text .eyebrow { margin-bottom: 6px; }
+
 .avatar {
-  display: block;
-  width: 96px;
-  height: 96px;
+  flex-shrink: 0;
+  width: 92px;
+  height: 92px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 22px;
   border: 1px solid var(--line);
   box-shadow: 0 2px 12px rgba(28, 26, 23, 0.10);
+}
+
+@media (max-width: 420px) {
+  .hero-id { gap: 16px; }
+  .avatar { width: 76px; height: 76px; }
 }
 
 .eyebrow {
