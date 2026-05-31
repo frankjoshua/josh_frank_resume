@@ -27,6 +27,9 @@
           }
         ]
       }
+    ],
+    "rewrites": [
+      { "source": "/talks/beyond-vibes/**", "destination": "/talks/beyond-vibes/index.html" }
     ]
   }
 }
