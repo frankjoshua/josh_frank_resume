@@ -107,6 +107,33 @@ a:hover { opacity: 0.65; }
   .row { grid-template-columns: 220px 1fr; gap: 28px; }
 }
 
+/* ===== Linked rows / blocks / stats (clickable proof) ===== */
+a.row {
+  color: inherit;
+  border-radius: 8px;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-left: -12px;
+  margin-right: -12px;
+  transition: background 0.15s;
+}
+a.row:hover { opacity: 1; background: rgba(32, 104, 74, 0.05); }
+a.row:hover h3 { color: var(--accent); }
+a.row h3::after {
+  content: " \2197";
+  font-size: 0.68em;
+  color: var(--muted);
+  vertical-align: top;
+  font-weight: 400;
+}
+
+a.crossover { color: inherit; display: block; transition: border-color 0.18s, box-shadow 0.18s; }
+a.crossover:hover { opacity: 1; border-color: var(--accent); box-shadow: 0 8px 24px rgba(28, 26, 23, 0.06); }
+
+a.stat { color: inherit; }
+a.stat:hover { opacity: 1; }
+a.stat:hover .n { color: var(--accent); }
+
 /* ===== Crossover highlight ===== */
 .crossover {
   margin-top: 8px;
