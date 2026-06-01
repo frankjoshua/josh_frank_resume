@@ -229,5 +229,21 @@
       </ul>
     </section>
   </div>
+
+  <!-- Firebase Analytics -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-analytics.js";
+    const app = initializeApp({
+      apiKey: "AIzaSyCh0QpI25W5qd7nluR82mtN-F5QRieCBwo",
+      authDomain: "resume-4f8c2.firebaseapp.com",
+      projectId: "resume-4f8c2",
+      storageBucket: "resume-4f8c2.firebasestorage.app",
+      messagingSenderId: "714761362880",
+      appId: "1:714761362880:web:615dfaae9859cc0feafc25",
+      measurementId: "G-7PJHD7HCBD"
+    });
+    getAnalytics(app);
+  </script>
 </body>
 </html>
